@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's Growing — Banjo's Backyard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --cream-dark: #EAE3D2;
+    --ink: #1C1A14;
+    --ink-mid: #4A4535;
+    --ink-light: #8A7F68;
+    --sage: #5C6B4A;
+    --sage-light: #8FA07A;
+    --sage-pale: #D6E0CC;
+    --border: rgba(28,26,20,0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+  .page-wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .back-link {
+    display: inline-block;
+    padding-top: 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    text-decoration: none;
+  }
+  .back-link:hover { text-decoration: underline; }
+  .site-header {
+    padding: 24px 0 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 12px;
+  }
+  .site-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .site-title em {
+    font-style: italic;
+    color: var(--sage);
+  }
+  .header-desc {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    color: var(--ink-mid);
+    max-width: 620px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-style: italic;
+  }
+  .coming-soon {
+    padding: 80px 0 120px;
+    text-align: center;
+  }
+  .coming-soon-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 20px;
+  }
+  .coming-soon-text {
+    font-family: 'Lora', serif;
+    font-size: clamp(22px, 4vw, 36px);
+    font-style: italic;
+    color: var(--ink-mid);
+    margin-bottom: 16px;
+  }
+  .coming-soon-sub {
+    font-size: 15px;
+    color: var(--ink-light);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .page-footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-light);
+    letter-spacing: 0.05em;
+  }
+  .footer-mark {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--sage);
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <a class="back-link" href="/">← Banjo's Backyard</a>
+  <header class="site-header">
+    <div class="eyebrow">Banjo's Backyard · Monroe, WA · Zone 8b</div>
+    <h1 class="site-title">What's <em>Growing?</em></h1>
+    <p class="header-desc">Seeds started, seedlings coming up, and what's ready for pickup this season.</p>
+  </header>
+  <div class="coming-soon">
+    <div class="coming-soon-label">Coming soon</div>
+    <div class="coming-soon-text">Seedling list coming this season.</div>
+    <p class="coming-soon-sub">Check back soon — or <a href="/contact/" style="color:var(--sage)">reach out directly</a> to ask what's available.</p>
+  </div>
+  <footer class="page-footer">
+    <span class="footer-note">Updated as stock changes. Contact to confirm availability.</span>
+    <span class="footer-mark">Banjo's Backyard</span>
+  </footer>
+</div>
+</body>
+</html>

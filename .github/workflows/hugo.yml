@@ -1,0 +1,32 @@
+name: Build Hugo Site
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'public/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.157.0'
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Commit built site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/
+          git diff --staged --quiet || git commit -m "Rebuild Hugo site [skip ci]"
+          git push
