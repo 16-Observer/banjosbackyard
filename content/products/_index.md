@@ -4,8 +4,30 @@ title: "Products"
 
 We currently offer:
 
-- Farm fresh eggs — daily availability varies; please contact to reserve or arrange pickup.
-- Starts & Seedlings — tomato and pepper starts in spring; see the "Starts & Seedlings" page to order.
-- Trees & Shrubs — see the Tree Forest for what we're growing and what's available for sale or barter.
+---
 
-To order: use the contact form on the Contact page or the quick order form on the Starts page. Venmo: @banjosbackyard for quick payments.
+### 🥚 Chicken Eggs — $6 / dozen
+
+Farm-fresh eggs from our free-range hens. Yolks are deep orange from a pasture and kitchen-scrap diet. Available most days — contact to confirm before pickup.
+
+---
+
+### 🪿 Goose Eggs — $10 / half dozen *(seasonal)*
+
+Rich, extra-large eggs from our resident geese. Goose eggs have a larger yolk-to-white ratio and a richer flavor — great for baking or a truly impressive breakfast. Available seasonally; stock is limited so reach out early.
+
+---
+
+### 🌱 Starts & Seedlings
+
+Tomato and pepper starts in spring — see the [Starts & Seedlings](/starts/) page to order.
+
+---
+
+### 🌳 Trees & Shrubs
+
+See the [Tree Farm](/tree-farm/) for what we're growing and what's available for sale or barter.
+
+---
+
+To order: use the contact form on the [Contact](/contact/) page or the quick order form on the Starts page. **Venmo: @banjosbackyard** for quick payments.

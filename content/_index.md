@@ -5,7 +5,7 @@ description: "A homestead practicing permaculture offering farm fresh eggs. Pick
 
 Welcome to Banjo's Backyard Farm — a small permaculture homestead offering farm fresh eggs and seasonal produce.
 
-- Fresh eggs available for pickup off State Route 203
+- Fresh eggs available for pickup off State Route 203 (Goose eggs available seasonally)
 - Contact to arrange pickup or delivery
 
 Explore: [What's Growing?](/whats-growing/) | [Tree Farm](/tree-farm/) | [Dog Sitting 🐾](https://www.rover.com/members/austin-o-more-paws-bonus-family-members/)

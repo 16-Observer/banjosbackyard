@@ -15,10 +15,10 @@ Pickup: Contact us to arrange a time!
 **Send us a message:**
 
 <form action="https://formspree.io/f/meerzrpz" method="POST">
-  <label>Name:<br><input type="text" name="name" required></label>
-  <label>Email:<br><input type="email" name="_replyto" required></label>
-  <label>Phone (optional):<br><input type="text" name="phone"></label>
-  <label>Message:<br><textarea name="message" rows="4" required></textarea></label>
+  <label>Name:<br><input type="text" name="name" required style="display:block;width:100%;padding:0.5rem 0.75rem;margin-top:0.25rem;border:2px solid #999;border-radius:6px;background:#fff;color:#111;font-size:1rem;box-sizing:border-box;"></label>
+  <label>Email:<br><input type="email" name="_replyto" required style="display:block;width:100%;padding:0.5rem 0.75rem;margin-top:0.25rem;border:2px solid #999;border-radius:6px;background:#fff;color:#111;font-size:1rem;box-sizing:border-box;"></label>
+  <label>Phone (optional):<br><input type="text" name="phone" style="display:block;width:100%;padding:0.5rem 0.75rem;margin-top:0.25rem;border:2px solid #999;border-radius:6px;background:#fff;color:#111;font-size:1rem;box-sizing:border-box;"></label>
+  <label>Message:<br><textarea name="message" rows="4" required style="display:block;width:100%;padding:0.5rem 0.75rem;margin-top:0.25rem;border:2px solid #999;border-radius:6px;background:#fff;color:#111;font-size:1rem;box-sizing:border-box;resize:vertical;"></textarea></label>
   <button type="submit">Send Message</button>
 </form>
 

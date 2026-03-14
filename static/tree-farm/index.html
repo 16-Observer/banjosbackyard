@@ -4,41 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Orchard — Banjo's Backyard</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #F5F0E8;
-    --cream-dark: #EAE3D2;
-    --ink: #1C1A14;
-    --ink-mid: #4A4535;
-    --ink-light: #8A7F68;
+    --cream: #ffffff;
+    --cream-dark: #f4f4f5;
+    --ink: #1d1e20;
+    --ink-mid: #555;
+    --ink-light: #888;
     --sage: #5C6B4A;
     --sage-light: #8FA07A;
     --sage-pale: #D6E0CC;
     --rust: #8B4A2A;
     --rust-light: #C4714A;
     --gold: #B8922A;
-    --border: rgba(28,26,20,0.12);
+    --border: rgba(0,0,0,0.1);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     background: var(--cream);
     color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     min-height: 100vh;
-  }
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.5;
   }
   .page-wrap {
     position: relative;
@@ -50,7 +38,7 @@
   .back-link {
     display: inline-block;
     padding-top: 28px;
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -64,7 +52,7 @@
     margin-bottom: 48px;
   }
   .eyebrow {
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 11px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -72,7 +60,7 @@
     margin-bottom: 12px;
   }
   .site-title {
-    font-family: 'Lora', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(36px, 6vw, 64px);
     font-weight: 400;
     line-height: 1.1;
@@ -91,7 +79,7 @@
     padding: 20px 0 24px;
   }
   .meta-pill {
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 12px;
     color: var(--ink-mid);
     background: var(--cream-dark);
@@ -100,7 +88,7 @@
     padding: 4px 10px;
   }
   .header-desc {
-    font-family: 'Lora', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 17px;
     color: var(--ink-mid);
     max-width: 620px;
@@ -124,7 +112,7 @@
   }
   .stat-cell:last-child { border-right: none; }
   .stat-num {
-    font-family: 'Lora', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 28px;
     font-weight: 400;
     color: var(--ink);
@@ -132,7 +120,7 @@
     line-height: 1;
   }
   .stat-label {
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 10px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -144,7 +132,7 @@
     margin-bottom: 36px;
   }
   .filter-label {
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -157,7 +145,7 @@
     gap: 6px;
   }
   .filter-btn {
-    font-family: 'DM Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 13px;
     font-weight: 400;
     padding: 6px 14px;
@@ -185,7 +173,7 @@
   .search-input {
     width: 100%;
     max-width: 360px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 14px;
     padding: 10px 16px 10px 38px;
     background: white;
@@ -239,7 +227,7 @@
   }
   .card-header-left { flex: 1; }
   .cat-type {
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 10px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -247,14 +235,14 @@
     margin-bottom: 3px;
   }
   .cat-name {
-    font-family: 'Lora', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 18px;
     font-weight: 400;
     color: var(--ink);
     line-height: 1.2;
   }
   .cat-badge {
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 11px;
     background: var(--sage-pale);
     color: var(--sage);
@@ -282,7 +270,7 @@
     color: var(--ink);
   }
   .variety-qty {
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 12px;
     color: var(--ink-light);
     flex-shrink: 0;
@@ -303,7 +291,7 @@
     text-align: center;
     padding: 64px 24px;
     color: var(--ink-light);
-    font-family: 'Lora', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-style: italic;
     font-size: 18px;
   }
@@ -317,13 +305,13 @@
     gap: 16px;
   }
   .footer-note {
-    font-family: 'DM Mono', monospace;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 11px;
     color: var(--ink-light);
     letter-spacing: 0.05em;
   }
   .footer-mark {
-    font-family: 'Lora', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 13px;
     font-style: italic;
     color: var(--sage);
@@ -344,9 +332,7 @@
     <h1 class="site-title">The <em>Orchard</em> &amp; Food Forest</h1>
     <p class="header-desc">Nine acres of intentional growing — fruit trees, berries, nuts, and a few things that have no business surviving a Pacific Northwest winter.</p>
     <div class="header-meta">
-      <span class="meta-pill">Est. on ~6.5 usable acres</span>
-      <span class="meta-pill">9 acres total</span>
-      <span class="meta-pill">Updated 2025</span>
+      <span class="meta-pill">Updated March 2026</span>
     </div>
   </header>
   <div class="stats-row" id="stats-row">
