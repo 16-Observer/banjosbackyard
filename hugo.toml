@@ -10,3 +10,40 @@ description = "A permaculture homestead offering farm fresh eggs, pickup off Sta
   author = "Banjo's Backyard Farm"
   email = "austingolney@gmail.com"
   phone = "(765) 831-2337"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
+  [[menu.main]]
+    identifier = "products"
+    name = "Products"
+    url = "/products/"
+    weight = 30
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 40
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 50
+
+[params.social]
+  instagram = "https://instagram.com/your-handle"
+  facebook = "https://facebook.com/your-page"
+  email = "mailto:austingolney@gmail.com"
