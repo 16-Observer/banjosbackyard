@@ -26,6 +26,79 @@
   }
 }
 
+/* Rover profile card */
+.rover-card {
+  margin: 1.25rem 0 1.5rem;
+  max-width: 420px;
+}
+
+.rover-card-inner {
+  border: 1.5px solid #d0e8d8;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem 1.2rem;
+  background: #f2faf5;
+}
+
+.rover-top {
+  margin-bottom: 0.6rem;
+}
+
+.rover-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #00824e;
+  background: #d0f0e0;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.rover-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a2e22;
+  margin-bottom: 0.3rem;
+}
+
+.rover-tagline {
+  font-size: 0.9rem;
+  color: #3d5c47;
+  margin-bottom: 0.75rem;
+}
+
+.rover-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.rover-details span {
+  font-size: 0.78rem;
+  color: #2e5c3a;
+  background: #c8ecd6;
+  border-radius: 4px;
+  padding: 3px 9px;
+}
+
+.rover-btn {
+  display: inline-block;
+  background: #00AA70;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.rover-btn:hover {
+  background: #00824e;
+}
+
 /* Contact / order form styling */
 .post-content form {
   max-width: 500px;
@@ -44,12 +117,19 @@
   width: 100%;
   padding: 0.5rem 0.75rem;
   margin-top: 0.25rem;
-  border: 1px solid var(--border, #ccc);
+  border: 1.5px solid #aaa;
   border-radius: 6px;
-  background: var(--entry, #fff);
-  color: var(--primary, #333);
+  background: #ffffff;
+  color: #222;
   font-size: 1rem;
   box-sizing: border-box;
+}
+
+.post-content form input[type=text]:focus,
+.post-content form input[type=email]:focus,
+.post-content form textarea:focus {
+  outline: none;
+  border-color: #5C6B4A;
 }
 
 .post-content form textarea {

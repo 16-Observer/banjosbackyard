@@ -8,7 +8,23 @@ Welcome to Banjo's Backyard Farm — a small permaculture homestead offering far
 - Fresh eggs available for pickup off State Route 203
 - Contact to arrange pickup or delivery
 
-Explore: [What's Growing?](/whats-growing/) | [Tree Farm](/tree-farm/)
+Explore: [What's Growing?](/whats-growing/) | [Tree Farm](/tree-farm/) | [Dog Sitting 🐾](https://www.rover.com/members/austin-o-more-paws-bonus-family-members/)
+
+<div class="rover-card">
+  <div class="rover-card-inner">
+    <div class="rover-top">
+      <span class="rover-badge">Available on Rover</span>
+    </div>
+    <div class="rover-title">🐾 Dog Sitting &amp; Boarding</div>
+    <div class="rover-tagline">Your pup joins the family — 9 acres to roam, Monroe, WA</div>
+    <div class="rover-details">
+      <span>Drop-in visits</span>
+      <span>Boarding</span>
+      <span>House sitting</span>
+    </div>
+    <a class="rover-btn" href="https://www.rover.com/members/austin-o-more-paws-bonus-family-members/" target="_blank" rel="noopener">View profile &amp; book on Rover →</a>
+  </div>
+</div>
 
 <div class="home-gallery">
   <img src="/images/IMG_6081.jpg" alt="Eggs in a carton">
