@@ -39,5 +39,5 @@ Explore: [What's Growing?](/whats-growing/) | [Tree Farm](/tree-farm/) | [Dog Si
 </div>
 
 <div style="text-align:center;margin:2rem 0 1rem;">
-  <img src="/images/logo-transparent.png" alt="Banjo's Backyard logo" style="max-width:320px;width:80%;opacity:0.85;">
+  <img src="/images/logo-transparent.png" alt="Banjo's Backyard logo" class="site-logo" style="max-width:320px;width:80%;opacity:0.85;">
 </div>
