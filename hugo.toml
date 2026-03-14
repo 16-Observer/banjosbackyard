@@ -44,6 +44,10 @@ description = "A permaculture homestead offering farm fresh eggs, pickup off Sta
     weight = 50
 
 [params.social]
-  instagram = "https://instagram.com/your-handle"
-  facebook = "https://facebook.com/your-page"
+  instagram = "https://instagram.com/banjosbackyard"
+  venmo = "https://venmo.com/banjosbackyard"
   email = "mailto:austingolney@gmail.com"
+
+[params.seo]
+  keywords = ["farm fresh eggs", "homestead", "permaculture", "Monroe WA", "local eggs"]
+  twitter = "@banjosbackyard"
