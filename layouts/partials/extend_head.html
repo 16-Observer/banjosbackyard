@@ -1,0 +1,43 @@
+<!-- Custom site metadata and LocalBusiness JSON-LD -->
+{{- /* Adds keywords meta and LocalBusiness JSON-LD for SEO and local search */ -}}
+{{ with .Site.Params.seo.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+
+<script type="application/ld+json">
+{{- $name := .Site.Title -}}
+{{- $base := .Site.BaseURL -}}
+{{- $phone := .Site.Params.phone -}}
+{{- $email := .Site.Params.email -}}
+{{- $desc := .Site.Params.seo.description -}}
+{{- $keywords := .Site.Params.seo.keywords -}}
+{{- $addrStreet := "23333 State Route 203" -}}
+{{- $addrLocality := "Monroe" -}}
+{{- $addrRegion := "WA" -}}
+{{- $addrPostal := "98272" -}}
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ $name }}",
+  "image": "{{ $base }}images/3489c863-6493-4b40-b599-922e90dfc5f8.png",
+  "url": "{{ $base }}",
+  "telephone": "{{ $phone }}",
+  "email": "{{ $email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ $addrStreet }}",
+    "addressLocality": "{{ $addrLocality }}",
+    "addressRegion": "{{ $addrRegion }}",
+    "postalCode": "{{ $addrPostal }}",
+    "addressCountry": "US"
+  },
+  "description": "{{ $desc }}",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "keywords": {{ jsonify $keywords }}
+}
+</script>
