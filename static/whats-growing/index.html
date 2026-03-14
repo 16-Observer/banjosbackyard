@@ -44,9 +44,15 @@
     margin: 0 auto;
     padding: 0 24px;
   }
-  .back-link {
-    display: inline-block;
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 28px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .back-link {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
     letter-spacing: 0.12em;
@@ -55,6 +61,20 @@
     text-decoration: none;
   }
   .back-link:hover { text-decoration: underline; }
+  .site-nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .site-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-decoration: none;
+  }
+  .site-nav a:hover { color: var(--sage); text-decoration: underline; }
   .site-header {
     padding: 24px 0 0;
     border-bottom: 1px solid var(--border);
@@ -89,31 +109,141 @@
     margin-bottom: 32px;
     font-style: italic;
   }
-  .coming-soon {
-    padding: 80px 0 120px;
-    text-align: center;
+  /* Preorder callout */
+  .preorder-callout {
+    background: var(--cream-dark);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sage);
+    border-radius: 3px;
+    padding: 24px 28px;
+    margin-bottom: 40px;
   }
-  .coming-soon-label {
+  .preorder-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 8px;
+  }
+  .preorder-title {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .preorder-body {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.65;
+  }
+  /* Two-column variety grid */
+  .variety-section {
+    margin-bottom: 48px;
+  }
+  .variety-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  @media (max-width: 640px) {
+    .variety-cols { grid-template-columns: 1fr; }
+  }
+  .variety-col-head {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--ink-light);
-    margin-bottom: 20px;
+    color: var(--sage);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
   }
-  .coming-soon-text {
-    font-family: 'Lora', serif;
-    font-size: clamp(22px, 4vw, 36px);
-    font-style: italic;
+  .variety-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  .variety-col ul li {
+    font-size: 14px;
     color: var(--ink-mid);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(28,26,20,0.05);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .variety-col ul li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--sage-light);
+    flex-shrink: 0;
+  }
+  .variety-col ul li:last-child { border-bottom: none; }
+
+  /* Order form */
+  .order-section {
+    margin-bottom: 64px;
+  }
+  .section-head {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .order-form {
+    max-width: 520px;
+  }
+  .form-group {
     margin-bottom: 16px;
   }
-  .coming-soon-sub {
-    font-size: 15px;
+  .form-group label {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--ink-light);
-    max-width: 400px;
-    margin: 0 auto;
+    margin-bottom: 6px;
   }
+  .form-group input,
+  .form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus { border-color: var(--sage); }
+  .form-group textarea { resize: vertical; }
+  .submit-btn {
+    margin-top: 8px;
+    padding: 11px 28px;
+    background: var(--sage);
+    color: var(--cream);
+    border: none;
+    border-radius: 3px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .submit-btn:hover { background: #4a5a3a; }
   .page-footer {
     border-top: 1px solid var(--border);
     padding: 32px 0 48px;
@@ -139,17 +269,110 @@
 </head>
 <body>
 <div class="page-wrap">
-  <a class="back-link" href="/">← Banjo's Backyard</a>
+  <div class="top-bar">
+    <a class="back-link" href="/">← Banjo's Backyard</a>
+    <nav class="site-nav">
+      <a href="/about/">About</a>
+      <a href="/products/">Products</a>
+      <a href="/contact/">Contact</a>
+      <a href="/posts/">Blog</a>
+    </nav>
+  </div>
   <header class="site-header">
     <div class="eyebrow">Banjo's Backyard · Monroe, WA · Zone 8b</div>
     <h1 class="site-title">What's <em>Growing?</em></h1>
     <p class="header-desc">Seeds started, seedlings coming up, and what's ready for pickup this season.</p>
   </header>
-  <div class="coming-soon">
-    <div class="coming-soon-label">Coming soon</div>
-    <div class="coming-soon-text">Seedling list coming this season.</div>
-    <p class="coming-soon-sub">Check back soon — or <a href="/contact/" style="color:var(--sage)">reach out directly</a> to ask what's available.</p>
+
+  <div class="preorder-callout">
+    <div class="preorder-label">Preorder · Very Limited</div>
+    <div class="preorder-title">Pepper &amp; Tomato Starts — 2025 Season</div>
+    <p class="preorder-body">Contact me with what you want and how many! Very, very limited quantities! Suggested price $4/start — but I want everyone to grow what they want!</p>
   </div>
+
+  <div class="variety-section">
+    <div class="variety-cols">
+      <div class="variety-col">
+        <div class="variety-col-head">Peppers — 27 varieties</div>
+        <ul>
+          <li>7 Pot Lava</li>
+          <li>Sugar Rush Peach</li>
+          <li>Brazilian Starfish</li>
+          <li>Big Mustard Momma</li>
+          <li>Fudda's Reaper Perfume</li>
+          <li>Bah Johkia × Sugar Rush Peach</li>
+          <li>Choc Cherry Bomb</li>
+          <li>Black Tai</li>
+          <li>Golden Habanero</li>
+          <li>Habanero Antillas Caribbean</li>
+          <li>Aji Charpupita</li>
+          <li>Aji Dragon</li>
+          <li>Aji Amarillo</li>
+          <li>Aji Dude</li>
+          <li>Aji Rico</li>
+          <li>Aji Gold</li>
+          <li>Aji Fantasy</li>
+          <li>Cherry Bomb</li>
+          <li>Fish Pepper</li>
+          <li>Orange Ripple</li>
+          <li>WHP006</li>
+          <li>Big Jim</li>
+          <li>Olympus</li>
+          <li>Poblano</li>
+          <li>Thai Compact</li>
+          <li>Thai Dragon</li>
+          <li>Rista Cayenne</li>
+        </ul>
+      </div>
+      <div class="variety-col">
+        <div class="variety-col-head">Tomatoes — 17 varieties</div>
+        <ul>
+          <li>Yellow Pear</li>
+          <li>Pink Brandywine</li>
+          <li>Yellow Brandywine</li>
+          <li>Cherokee Purple</li>
+          <li>Black Strawberry</li>
+          <li>Rosella</li>
+          <li>Isis Candy</li>
+          <li>Black Beauty</li>
+          <li>Sunrise Bumblebee</li>
+          <li>Brad's Atomic Grape</li>
+          <li>Sungold Select</li>
+          <li>Amish Paste</li>
+          <li>Black Cherry</li>
+          <li>Roma</li>
+          <li>Beefsteak Plus</li>
+          <li>Yellow Gooseberry</li>
+          <li>Sunny Boy Hybrid</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="order-section">
+    <div class="section-head">Place a preorder</div>
+    <form class="order-form" action="https://formspree.io/f/meerzrpz" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone <span style="text-transform:none;font-style:italic;">(optional)</span></label>
+        <input type="text" id="phone" name="phone">
+      </div>
+      <div class="form-group">
+        <label for="order">What do you want and how many?</label>
+        <textarea id="order" name="order" rows="5" required placeholder="e.g. 2× Sugar Rush Peach, 3× Cherokee Purple…"></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="New starts preorder">
+      <button type="submit" class="submit-btn">Place preorder →</button>
+    </form>
+  </div>
+
   <footer class="page-footer">
     <span class="footer-note">Updated as stock changes. Contact to confirm availability.</span>
     <span class="footer-mark">Banjo's Backyard</span>
