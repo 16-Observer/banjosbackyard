@@ -20,7 +20,7 @@ Rich, extra-large eggs from our resident geese. Goose eggs have a larger yolk-to
 
 ### 🌱 Starts & Seedlings
 
-Tomato and pepper starts in spring — see the [Starts & Seedlings](/starts/) page to order.
+Tomato and pepper starts in spring — see the [What's Growing?](/whats-growing/) page to order.
 
 ---
 

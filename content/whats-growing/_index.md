@@ -1,5 +1,6 @@
 ---
-title: "Starts & Seedlings"
+title: "What's Growing?"
+layout: "page"
 ---
 
 We grow tomato and pepper starts, plus other seasonal seedlings. To order, use the quick form below or call/text to arrange pickup.
