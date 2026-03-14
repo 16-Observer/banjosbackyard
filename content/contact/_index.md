@@ -15,7 +15,7 @@ Map:
 Contact form (Formspree)
 
 <!-- To enable the form: sign up at https://formspree.io, create a form, then replace the action URL below with your Formspree form endpoint -->
-<form action="https://formspree.io/f/your-form-id" method="POST">
+<form action="https://formspree.io/f/meerzrpz" method="POST">
   <label>Name:<br><input type="text" name="name" required></label><br>
   <label>Email:<br><input type="email" name="email" required></label><br>
   <label>Phone (optional):<br><input type="text" name="phone"></label><br>
