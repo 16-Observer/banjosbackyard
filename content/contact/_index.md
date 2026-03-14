@@ -27,5 +27,5 @@ If the form doesn't work on your device, email us directly: <a href="mailto:aust
 
 Social:
 
-- Instagram: <a href="https://instagram.com/banjosbackyard">@banjosbackyard</a>
+- Instagram: <a href="https://instagram.com/Banjos.Backyard">@Banjos.Backyard</a>
 - Venmo: <a href="https://venmo.com/banjosbackyard">@banjosbackyard</a>
