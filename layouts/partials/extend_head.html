@@ -1,3 +1,6 @@
+<!-- Custom styles -->
+<link rel="stylesheet" href="/css/custom.css">
+
 <!-- Custom site metadata and LocalBusiness JSON-LD -->
 {{- /* Adds keywords meta and LocalBusiness JSON-LD for SEO and local search */ -}}
 {{ with .Site.Params.seo.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}

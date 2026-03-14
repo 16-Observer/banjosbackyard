@@ -10,18 +10,15 @@ Welcome to Banjo's Backyard Farm — a small permaculture homestead offering far
 
 Explore: [About](/about/) | [Products](/products/) | [Contact](/contact/)
 
-Gallery:
-
 <div class="home-gallery">
-  <img src="/images/IMG_6081.jpg" alt="Eggs in a carton" style="max-width:200px;margin:6px">
-  <img src="/images/20251229_143814.jpg" alt="Coop and hens" style="max-width:200px;margin:6px">
-  <img src="/images/20250810_125725.jpg" alt="Pickup spot off State 203" style="max-width:200px;margin:6px">
-  <img src="/images/3489c863-6493-4b40-b599-922e90dfc5f8.png" alt="Farm logo" style="max-width:200px;margin:6px">
-</div>
-
-<div class="home-gallery">
-  <img src="/images/IMG_6081.jpg" alt="Eggs in a carton" style="max-width:200px;margin:6px">
-  <img src="/images/20251229_143814.jpg" alt="Coop and hens" style="max-width:200px;margin:6px">
-  <img src="/images/20250810_125725.jpg" alt="Pickup spot off State 203" style="max-width:200px;margin:6px">
-  <img src="/images/3489c863-6493-4b40-b599-922e90dfc5f8.png" alt="Farm logo" style="max-width:200px;margin:6px">
+  <img src="/images/IMG_6081.jpg" alt="Eggs in a carton">
+  <img src="/images/20251229_143814.jpg" alt="Coop and hens">
+  <img src="/images/20250810_125725.jpg" alt="Pickup spot off State 203">
+  <img src="/images/20250726_115111(0) (1).jpg" alt="Farm view">
+  <img src="/images/20250822_215416.jpg" alt="Backyard farm">
+  <img src="/images/20250721_193842.jpg" alt="Summer on the farm">
+  <img src="/images/20230709_201753.jpg" alt="Farm life">
+  <img src="/images/20190530_181541.jpg" alt="Early days">
+  <img src="/images/Screenshot_20251107_143054_Photos.jpg" alt="Farm photo">
+  <img src="/images/3489c863-6493-4b40-b599-922e90dfc5f8.png" alt="Farm logo">
 </div>

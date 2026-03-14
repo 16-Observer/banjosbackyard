@@ -2,6 +2,7 @@ baseURL = "https://banjosbackyardfarm.com"
 languageCode = "en-us"
 title = "Banjo's Backyard Farm"
 theme = "PaperMod"
+relativeURLs = true
 
 # Site description used by themes and meta tags
 description = "A permaculture homestead offering farm fresh eggs, pickup off State 203 near Monroe, WA."
