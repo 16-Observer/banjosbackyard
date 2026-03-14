@@ -8,7 +8,7 @@ Welcome to Banjo's Backyard Farm — a small permaculture homestead offering far
 - Fresh eggs available for pickup off State Route 203
 - Contact to arrange pickup or delivery
 
-Explore: [About](/about/) | [Products](/products/) | [Contact](/contact/)
+Explore: [What's Growing?](/whats-growing/) | [Tree Farm](/tree-farm/)
 
 <div class="home-gallery">
   <img src="/images/IMG_6081.jpg" alt="Eggs in a carton">
