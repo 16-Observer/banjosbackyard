@@ -1,0 +1,104 @@
+{{- define "main" -}}
+<div class="wg-noise" aria-hidden="true"></div>
+<div class="wg-wrap">
+  <header class="wg-site-header">
+    <div class="wg-eyebrow">Banjo's Backyard · Monroe, WA · Zone 8b</div>
+    <h1 class="wg-title">What's <em>Growing?</em></h1>
+    <p class="wg-desc">Seeds started, seedlings coming up, and what's ready for pickup this season.</p>
+  </header>
+
+  <div class="wg-preorder">
+    <div class="wg-preorder-label">Preorder · Very Limited</div>
+    <div class="wg-preorder-title">Pepper &amp; Tomato Starts — 2025 Season</div>
+    <p class="wg-preorder-body">Contact me with what you want and how many! Very, very limited quantities! Suggested price $4/start — but I want everyone to grow what they want!</p>
+  </div>
+
+  <div class="wg-varieties">
+    <div class="wg-cols">
+      <div class="wg-col">
+        <div class="wg-col-head">Peppers — 27 varieties</div>
+        <ul>
+          <li>7 Pot Lava</li>
+          <li>Sugar Rush Peach</li>
+          <li>Brazilian Starfish</li>
+          <li>Big Mustard Momma</li>
+          <li>Fudda's Reaper Perfume</li>
+          <li>Bah Johkia × Sugar Rush Peach</li>
+          <li>Choc Cherry Bomb</li>
+          <li>Black Thai</li>
+          <li>Golden Habanero</li>
+          <li>Habanero Antillas Caribbean</li>
+          <li>Aji Charpupita</li>
+          <li>Aji Dragon</li>
+          <li>Aji Amarillo</li>
+          <li>Aji Dude</li>
+          <li>Aji Rico</li>
+          <li>Aji Gold</li>
+          <li>Aji Fantasy</li>
+          <li>Cherry Bomb</li>
+          <li>Fish Pepper</li>
+          <li>Orange Ripple</li>
+          <li>WHP006</li>
+          <li>Big Jim</li>
+          <li>Olympus</li>
+          <li>Poblano</li>
+          <li>Thai Compact</li>
+          <li>Thai Dragon</li>
+          <li>Rista Cayenne</li>
+        </ul>
+      </div>
+      <div class="wg-col">
+        <div class="wg-col-head">Tomatoes — 17 varieties</div>
+        <ul>
+          <li>Yellow Pear</li>
+          <li>Pink Brandywine</li>
+          <li>Yellow Brandywine</li>
+          <li>Cherokee Purple</li>
+          <li>Black Strawberry</li>
+          <li>Rosella</li>
+          <li>Isis Candy</li>
+          <li>Black Beauty</li>
+          <li>Sunrise Bumblebee</li>
+          <li>Brad's Atomic Grape</li>
+          <li>Sungold Select</li>
+          <li>Amish Paste</li>
+          <li>Black Cherry</li>
+          <li>Roma</li>
+          <li>Beefsteak Plus</li>
+          <li>Yellow Gooseberry</li>
+          <li>Sunny Boy Hybrid</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wg-order">
+    <div class="wg-section-head">Place a preorder</div>
+    <form class="wg-form" action="https://formspree.io/f/meerzrpz" method="POST">
+      <div class="wg-form-group">
+        <label for="wg-name">Name</label>
+        <input type="text" id="wg-name" name="name" required>
+      </div>
+      <div class="wg-form-group">
+        <label for="wg-email">Email</label>
+        <input type="email" id="wg-email" name="_replyto" required>
+      </div>
+      <div class="wg-form-group">
+        <label for="wg-phone">Phone <span style="text-transform:none;font-style:italic;">(optional)</span></label>
+        <input type="text" id="wg-phone" name="phone">
+      </div>
+      <div class="wg-form-group">
+        <label for="wg-order">What do you want and how many?</label>
+        <textarea id="wg-order" name="order" rows="5" required placeholder="e.g. 2× Sugar Rush Peach, 3× Cherokee Purple…"></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="New starts preorder">
+      <button type="submit" class="wg-submit">Place preorder →</button>
+    </form>
+  </div>
+
+  <footer class="wg-footer">
+    <span class="wg-footer-note">Updated as stock changes. Contact to confirm availability.</span>
+    <span class="wg-footer-mark">Banjo's Backyard</span>
+  </footer>
+</div>
+{{- end -}}
