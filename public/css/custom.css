@@ -1,3 +1,32 @@
+/* =====================================================
+   Site-wide color scheme — warm cream/sage palette
+   ===================================================== */
+:root {
+  --theme:   #F5F0E8;
+  --entry:   #EAE3D2;
+  --primary: #1C1A14;
+  --secondary: #4A4535;
+  --tertiary:  #D6E0CC;
+  --content:   #1C1A14;
+  --code-bg:   #EAE3D2;
+  --border:    #d8d1c0;
+}
+[data-theme=dark] {
+  --theme:   #1C1A14;
+  --entry:   #242118;
+  --primary: #EDE8DC;
+  --secondary: #C0B498;
+  --tertiary:  #2e2b22;
+  --content:   #EDE8DC;
+  --code-bg:   #2a2820;
+  --border:    #2e2b22;
+}
+/* Links use sage green */
+a                        { color: #5C6B4A; }
+a:hover                  { color: #8FA07A; }
+[data-theme=dark] a      { color: #8FA07A; }
+[data-theme=dark] a:hover{ color: #a8bc90; }
+
 /* Gallery grid layout — 3 columns like Instagram */
 .home-gallery {
   display: grid !important;
