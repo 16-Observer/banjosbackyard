@@ -155,7 +155,9 @@
 
 /* Consistent nav font across PaperMod pages — matches static pages */
 #menu a,
-#menu a:visited {
+#menu a:visited,
+#menu a span,
+#menu li a span {
   font-family: 'DM Mono', monospace !important;
   font-size: 11px !important;
   font-weight: 400 !important;
