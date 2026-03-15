@@ -342,7 +342,61 @@
     .stat-cell:last-child { border-bottom: none; }
     .page-footer { flex-direction: column; align-items: flex-start; }
   }
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cream: #18191b;
+      --cream-dark: #222426;
+      --ink: #e2e2df;
+      --ink-mid: #aaa89e;
+      --ink-light: #707068;
+      --sage: #8FA07A;
+      --sage-light: #6B7A5A;
+      --sage-pale: #222e1a;
+      --rust: #C4714A;
+      --rust-light: #d8896a;
+      --gold: #c8a240;
+      --border: rgba(255,255,255,0.1);
+    }
+    .stat-cell, .search-input { background: var(--cream-dark); }
+    .cat-card { background: var(--cream-dark); }
+    .card-header { background: var(--cream); }
+    .type-tree .cat-badge { background: #3a1a0a; }
+    .type-vine .cat-badge { background: #2e2608; }
+    .type-berry .cat-badge { background: #141828; }
+    .type-nut .cat-badge { background: #261a08; }
+    .type-tropical .cat-badge { background: #0a2018; }
+  }
 </style>
+<script>
+  (function() {
+    function applyTheme(dark) {
+      var r = document.documentElement;
+      if (dark) {
+        r.style.setProperty('--cream','#18191b');
+        r.style.setProperty('--cream-dark','#222426');
+        r.style.setProperty('--ink','#e2e2df');
+        r.style.setProperty('--ink-mid','#aaa89e');
+        r.style.setProperty('--ink-light','#707068');
+        r.style.setProperty('--sage','#8FA07A');
+        r.style.setProperty('--sage-pale','#222e1a');
+        r.style.setProperty('--border','rgba(255,255,255,0.1)');
+      } else {
+        r.style.removeProperty('--cream');
+        r.style.removeProperty('--cream-dark');
+        r.style.removeProperty('--ink');
+        r.style.removeProperty('--ink-mid');
+        r.style.removeProperty('--ink-light');
+        r.style.removeProperty('--sage');
+        r.style.removeProperty('--sage-pale');
+        r.style.removeProperty('--border');
+      }
+    }
+    var stored = localStorage.getItem('pref-theme');
+    var sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(stored === 'dark' || (!stored && sysDark));
+  })();
+</script>
 </head>
 <body>
 <div class="page-wrap">
