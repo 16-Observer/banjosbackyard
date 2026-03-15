@@ -153,9 +153,11 @@
   opacity: 0.85;
 }
 
-/* Logo: add a soft light backing in dark mode so the dark artwork stays readable */
+/* Logo: invert colors in dark mode so the dark artwork shows as white */
 [data-theme=dark] .site-logo {
-  background: rgba(255, 255, 255, 0.88);
-  border-radius: 10px;
-  padding: 8px 16px;
+  filter: invert(1);
+  opacity: 1;
+}
+@media (prefers-color-scheme: dark) {
+  .site-logo { filter: invert(1); opacity: 1; }
 }
