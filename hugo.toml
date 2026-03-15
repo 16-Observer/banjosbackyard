@@ -24,9 +24,9 @@ description = "A permaculture homestead offering farm fresh eggs, pickup off Sta
     url = "/"
     weight = 10
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    identifier = "contact"
+    name = "Contact Us"
+    url = "/contact/"
     weight = 20
   [[menu.main]]
     identifier = "products"
@@ -34,14 +34,14 @@ description = "A permaculture homestead offering farm fresh eggs, pickup off Sta
     url = "/products/"
     weight = 30
   [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
-    weight = 40
-  [[menu.main]]
     identifier = "blog"
     name = "Blog"
     url = "/posts/"
+    weight = 40
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
     weight = 50
 
 [params.social]

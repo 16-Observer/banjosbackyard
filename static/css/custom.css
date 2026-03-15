@@ -153,6 +153,16 @@
   opacity: 0.85;
 }
 
+/* Consistent nav font across PaperMod pages — matches static pages */
+#menu a,
+#menu a:visited {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
 /* Logo: invert colors in dark mode so the dark artwork shows as white */
 [data-theme=dark] .site-logo {
   filter: invert(1);
