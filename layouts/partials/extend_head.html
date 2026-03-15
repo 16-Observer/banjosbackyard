@@ -4,6 +4,14 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- Custom styles -->
 <link rel="stylesheet" href="/css/custom.css">
+{{- if eq .RelPermalink "/whats-growing/" }}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/whats-growing.css">
+{{- end }}
+{{- if eq .RelPermalink "/tree-farm/" }}
+<link rel="stylesheet" href="/css/tree-farm.css">
+{{- end }}
 
 <!-- Custom site metadata and LocalBusiness JSON-LD -->
 {{- /* Adds keywords meta and LocalBusiness JSON-LD for SEO and local search */ -}}

@@ -1,0 +1,168 @@
+{{- define "main" -}}
+<div class="tf-wrap">
+  <header class="tf-site-header">
+    <div class="tf-eyebrow">Banjo's Backyard · Monroe, WA · Zone 8b</div>
+    <h1 class="tf-title">The <em>Orchard</em> &amp; Food Forest</h1>
+    <p class="tf-desc">Nine acres of intentional growing — fruit trees, berries, nuts, and a few things that have no business surviving a Pacific Northwest winter.</p>
+    <div class="tf-header-meta">
+      <span class="tf-meta-pill">Updated March 2026</span>
+    </div>
+  </header>
+
+  <div class="tf-stats-row" id="tf-stats-row">
+    <div class="tf-stat-cell">
+      <span class="tf-stat-num" id="tf-stat-varieties">—</span>
+      <span class="tf-stat-label">Varieties</span>
+    </div>
+    <div class="tf-stat-cell">
+      <span class="tf-stat-num" id="tf-stat-plants">—</span>
+      <span class="tf-stat-label">Plants &amp; Trees</span>
+    </div>
+    <div class="tf-stat-cell">
+      <span class="tf-stat-num" id="tf-stat-cats">—</span>
+      <span class="tf-stat-label">Categories</span>
+    </div>
+  </div>
+
+  <div class="tf-search-wrap">
+    <span class="tf-search-icon">⌕</span>
+    <input class="tf-search-input" type="text" id="tf-search" placeholder="Search varieties…" autocomplete="off">
+  </div>
+
+  <div class="tf-filter-section">
+    <div class="tf-filter-label">Filter by type</div>
+    <div class="tf-filter-wrap" id="tf-filter-wrap"></div>
+  </div>
+
+  <div class="tf-grid" id="tf-grid"></div>
+
+  <footer class="tf-footer">
+    <span class="tf-footer-note">Inventory reflects plants in ground + containers. Subject to change as the operation grows.</span>
+    <span class="tf-footer-mark">Banjo's Backyard</span>
+  </footer>
+</div>
+
+<script>
+const tfData = [
+  { name:"Apples", type:"tree", typeLabel:"Fruit Tree", items:[["Granny Smith",1],["Cosmic Crisp",1],["Pink Lady",1]] },
+  { name:"Figs", type:"tree", typeLabel:"Fruit Tree", items:[["Chicago Hardy",2]] },
+  { name:"Pomegranates", type:"tree", typeLabel:"Fruit Tree", items:[["Afganski",1],["Macedonia Red",1]] },
+  { name:"Pears", type:"tree", typeLabel:"Fruit Tree", items:[["Bosc",1],["Shipova",2],["Nijisseiki Asian",1],["Korean Giant Asian",1]] },
+  { name:"Peaches", type:"tree", typeLabel:"Fruit Tree", items:[["Frost",1]] },
+  { name:"Plums & Pluerry", type:"tree", typeLabel:"Fruit Tree", items:[["Candy Heart Pluerry",1],["Shiro",1]] },
+  { name:"Cherries", type:"tree", typeLabel:"Fruit Tree", items:[["Sam",1],["Lapins",1]] },
+  { name:"Apricots", type:"tree", typeLabel:"Fruit Tree", items:[["Harcot",1]] },
+  { name:"Persimmons", type:"tree", typeLabel:"Fruit Tree", items:[["Hachiya Asian",1]] },
+  { name:"Jujube", type:"tree", typeLabel:"Fruit Tree", items:[["Shanxi Li",1]] },
+  { name:"Medlar", type:"tree", typeLabel:"Fruit Tree", items:[["Royal",1]] },
+  { name:"Quince", type:"tree", typeLabel:"Fruit Tree", items:[["Aromatnaya Russian",1]] },
+  { name:"Mulberry", type:"tree", typeLabel:"Fruit Tree", items:[["Illinois Everbearing",1]] },
+  { name:"Che Berries", type:"tree", typeLabel:"Fruit Tree", items:[["Che Berry",4]] },
+  { name:"Citrus", type:"tropical", typeLabel:"Indoor / Container", items:[["Meyer Lemon",2],["Shiranui Mandarin",1],["Owari Satsuma",1],["Yuzu",1],["Citrumelo",1],["Thomasville Citrangequat",1]] },
+  { name:"Tropicals", type:"tropical", typeLabel:"Indoor / Container", items:[["Scarlet Gran Banana",1],["Cavendish Banana",1],["Pineapple",1]] },
+  { name:"Grapes", type:"vine", typeLabel:"Vine", items:[["Niagara",2],["Himrod",1],["Concorde",2],["Lakemont",2]] },
+  { name:"Hardy Kiwi", type:"vine", typeLabel:"Vine", items:[["Issi",1],["Prolific",1]] },
+  { name:"Raspberries", type:"berry", typeLabel:"Berry", items:[["Mixed",26]] },
+  { name:"Strawberries", type:"berry", typeLabel:"Berry", items:[["Mixed",50]] },
+  { name:"Blueberries", type:"berry", typeLabel:"Berry", items:[["Mixed",17]] },
+  { name:"Blackberries", type:"berry", typeLabel:"Berry", items:[["Mixed",4]] },
+  { name:"Gooseberries", type:"berry", typeLabel:"Berry", items:[["Amish Red",1],["Pixwell",2]] },
+  { name:"Currants", type:"berry", typeLabel:"Berry", items:[["Red Currants",5]] },
+  { name:"Jostaberries", type:"berry", typeLabel:"Berry", items:[["Josta",2]] },
+  { name:"Goji", type:"berry", typeLabel:"Berry", items:[["Crimson Star",1],["Big Lifeberry",1]] },
+  { name:"Honeyberries", type:"berry", typeLabel:"Berry", items:[["Aurora",1],["Indigo Gem",1]] },
+  { name:"Serviceberries", type:"berry", typeLabel:"Berry", items:[["Smokey",2]] },
+  { name:"Hazelnuts", type:"nut", typeLabel:"Nut", items:[["Jefferson",1],["Dorris",1]] },
+  { name:"Chestnuts", type:"nut", typeLabel:"Nut", items:[["Marval",1],["Chinese",2],["Colossal",1]] },
+];
+
+const tfAllTypes = ["All","tree","vine","berry","nut","tropical"];
+const tfTypeLabels = { tree:"Fruit Trees", vine:"Vines", berry:"Berries", nut:"Nuts", tropical:"Indoor / Container" };
+let tfActiveFilter = "All";
+let tfSearch = "";
+
+function tfCountPlants(cat){ return cat.items.reduce((s,[,q])=>s+q,0); }
+
+function tfUpdateStats(visible){
+  document.getElementById('tf-stat-varieties').textContent = visible.reduce((s,c)=>s+c.items.length,0);
+  document.getElementById('tf-stat-plants').textContent = visible.reduce((s,c)=>s+tfCountPlants(c),0);
+  document.getElementById('tf-stat-cats').textContent = visible.length;
+}
+
+function tfBuildFilters(){
+  const wrap = document.getElementById('tf-filter-wrap');
+  tfAllTypes.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'tf-filter-btn' + (t==='All'?' active':'');
+    btn.textContent = t==='All' ? 'All' : tfTypeLabels[t];
+    btn.dataset.type = t;
+    btn.onclick = () => {
+      tfActiveFilter = t;
+      document.querySelectorAll('.tf-filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      tfRender();
+    };
+    wrap.appendChild(btn);
+  });
+}
+
+function tfGetVisible(){
+  return tfData.filter(cat => {
+    const matchType = tfActiveFilter==='All' || cat.type===tfActiveFilter;
+    const q = tfSearch.toLowerCase();
+    const matchSearch = !q || cat.name.toLowerCase().includes(q) || cat.items.some(([n])=>n.toLowerCase().includes(q));
+    return matchType && matchSearch;
+  }).map(cat => {
+    if(!tfSearch) return cat;
+    const q = tfSearch.toLowerCase();
+    if(cat.name.toLowerCase().includes(q)) return cat;
+    return { ...cat, items: cat.items.filter(([n])=>n.toLowerCase().includes(q)) };
+  });
+}
+
+function tfRender(){
+  const visible = tfGetVisible();
+  const grid = document.getElementById('tf-grid');
+  grid.innerHTML = '';
+  if(!visible.length){
+    const empty = document.createElement('div');
+    empty.className = 'tf-empty';
+    empty.textContent = 'No varieties match that search.';
+    grid.appendChild(empty);
+    tfUpdateStats([]);
+    return;
+  }
+  visible.forEach((cat, i) => {
+    const card = document.createElement('div');
+    card.className = `tf-card tf-type-${cat.type}`;
+    card.style.animationDelay = `${i * 30}ms`;
+    const total = tfCountPlants(cat);
+    card.innerHTML = `
+      <div class="tf-card-header">
+        <div class="tf-card-header-left">
+          <div class="tf-cat-type">${cat.typeLabel}</div>
+          <div class="tf-cat-name">${cat.name}</div>
+        </div>
+        <span class="tf-badge">${cat.items.length} var${cat.items.length===1?'':'s'} · ${total}</span>
+      </div>
+      <div class="tf-variety-list">
+        ${cat.items.map(([name,qty])=>`
+          <div class="tf-variety-row">
+            <span class="tf-variety-name">${name}</span>
+            <span class="tf-variety-qty">×${qty}</span>
+          </div>`).join('')}
+      </div>`;
+    grid.appendChild(card);
+  });
+  tfUpdateStats(visible);
+}
+
+document.getElementById('tf-search').addEventListener('input', e => {
+  tfSearch = e.target.value;
+  tfRender();
+});
+
+tfBuildFilters();
+tfRender();
+</script>
+{{- end -}}
