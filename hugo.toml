@@ -5,7 +5,7 @@ theme = "PaperMod"
 relativeURLs = true
 
 # Site description used by themes and meta tags
-description = "A permaculture homestead offering farm fresh eggs, pickup off State 203 near Monroe, WA."
+description = "Permaculture homestead near Monroe, WA — farm fresh eggs, superhot &amp; rare pepper starts, heirloom tomato seedlings, fruit trees, and food forest plants."
 
 [params]
   author = "Banjo's Backyard Farm"
@@ -50,6 +50,14 @@ description = "A permaculture homestead offering farm fresh eggs, pickup off Sta
   email = "mailto:austingolney@gmail.com"
 
 [params.seo]
-  keywords = ["farm fresh eggs", "homestead", "permaculture", "Monroe WA", "local eggs"]
+  keywords = [
+    "farm fresh eggs", "local eggs Monroe WA", "homestead", "permaculture",
+    "pepper starts", "tomato starts", "hot pepper seedlings", "superhot pepper plants",
+    "rare pepper varieties", "heirloom tomato starts", "pepper preorder",
+    "7 Pot pepper", "Aji pepper", "Sugar Rush Peach pepper",
+    "backyard nursery Monroe WA", "fruit trees for sale Monroe WA",
+    "food forest", "orchard trees Washington state",
+    "dog sitting Monroe WA", "dog boarding Monroe WA"
+  ]
   twitter = "@banjosbackyard"
-  description = "Banjos Backyard Farm — permaculture homestead offering farm fresh eggs, trees, and nursery starts. Pickup off State 203 near Monroe, WA."
+  description = "Banjo's Backyard Farm — permaculture homestead near Monroe, WA. Farm fresh eggs, superhot and rare pepper starts, heirloom tomato seedlings, fruit trees, and orchard plants. Pickup off State Route 203."

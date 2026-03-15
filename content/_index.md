@@ -38,6 +38,6 @@ Explore: [What's Growing?](/whats-growing/) | [Tree Farm](/tree-farm/) | [Dog Si
   <img src="/images/Screenshot_20251107_143054_Photos.jpg" alt="Farm photo">
 </div>
 
-<div style="text-align:center;margin:2rem 0 1rem;">
-  <img src="/images/logo-transparent.png" alt="Banjo's Backyard logo" class="site-logo" style="max-width:320px;width:80%;opacity:0.85;">
+<div style="text-align:center;margin:4rem auto 2rem;display:block;">
+  <img src="/images/logo-transparent.png" alt="Banjo's Backyard logo" class="site-logo" style="max-width:320px;width:80%;opacity:0.85;display:inline-block;">
 </div>
