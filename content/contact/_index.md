@@ -24,5 +24,6 @@ Pickup: Contact us to arrange a time!
 
 **Social:**
 
-- Instagram: <a href="https://instagram.com/Banjos.Backyard">@Banjos.Backyard</a>
+- Facebook: <a href="https://www.facebook.com/profile.php?id=61580657137539">Banjo's Backyard Farm</a>
+- Instagram: <a href="https://www.instagram.com/banjos.backyard/">@banjos.backyard</a>
 - Venmo: <a href="https://venmo.com/banjosbackyard">@banjosbackyard</a>
