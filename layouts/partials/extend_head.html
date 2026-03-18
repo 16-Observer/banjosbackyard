@@ -16,6 +16,7 @@
 <!-- Custom site metadata and LocalBusiness JSON-LD -->
 {{- /* Adds keywords meta and LocalBusiness JSON-LD for SEO and local search */ -}}
 {{ with .Site.Params.seo.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+{{ with .Site.Params.seo.twitter }}<meta name="twitter:creator" content="{{ . }}">{{ end }}
 
 <script type="application/ld+json">
 {{- $name := .Site.Title -}}
@@ -53,6 +54,10 @@
       "closes": "20:00"
     }
   ],
-  "keywords": {{ jsonify $keywords }}
+  "keywords": {{ jsonify $keywords }},
+  "sameAs": [
+    "{{ .Site.Params.social.facebook }}",
+    "{{ .Site.Params.social.instagram }}"
+  ]
 }
 </script>
